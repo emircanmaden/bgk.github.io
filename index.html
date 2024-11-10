@@ -1,12 +1,3 @@
-<?php
-session_start();
-
-// Oturum kontrolü yap
-if (!isset($_SESSION['giris_yapildi']) || $_SESSION['giris_yapildi'] !== true) {
-    // Giriş yapılmamışsa giris.php'ye yönlendir
-    header("Location: giris.php");
-    exit();
-}
 ?>
 
 <!DOCTYPE html>
