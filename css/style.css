@@ -149,6 +149,56 @@ header nav ul li a:hover {
     background-color: var(--themeGreen);
 }
 
+
+.newbar {
+    position: fixed; /* Sağ üst köşeye sabitle */
+    top: 0; /* En üstte yerleştir */
+    right: 0; /* Sağ kenara yapıştır */
+    z-index: 10; /* Önde görünmesini sağla */
+    background-color: rgba(0, 0, 0, 0.6); /* Hafif siyah arka plan */
+    padding: 5px; /* Küçük iç boşluk */
+    border-radius: 0 0 8px 8px; /* Alt köşeleri yuvarla */
+    gap: 20px; /* İkonlar arasındaki boşluk */
+    display: flex;
+    flex-direction: column; /* İkonları dikey hizala */
+    align-items: center;
+}
+
+.newbar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.newbar nav ul li {
+    margin: 5px 0; /* Daha dar dikey boşluk */
+}
+
+.newbar nav ul li a {
+    display: inline-flex;
+    width: 35px; /* Küçültülmüş ikon boyutu */
+    height: 35px;
+    background-color: var(--themeGreen); /* İkonların arka plan rengi */
+    border-radius: 50%; /* İkonları yuvarla */
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Hover için geçiş efekti */
+}
+
+.newbar nav ul li a img {
+    width: 20px; /* Küçük ikon boyutu */
+    height: 20px;
+    filter: invert(1); /* Beyaz yap */
+}
+
+.newbar nav ul li a:hover {
+    background-color: #ffffff; /* Hover'da arka plan rengi değiştir */
+}
+
+.newbar nav ul li a:hover img {
+    filter: invert(0); /* Hover'da ikonları yeşil yap */
+}
+
 .icon-white {
     filter: invert(1); /* Renkleri ters çevirir: Siyah -> Beyaz */
 }
@@ -803,6 +853,7 @@ footer .newsLetterContainer input {
         position: relative;
         width: 30px;
         height: 30px;
+        right: 40px;
         border: 2px solid #fff;
         margin-top: -6px;
         border-radius: 5px;
@@ -846,7 +897,8 @@ footer .newsLetterContainer input {
 
     /* Menü Hover ile Açılır */
     header nav:hover ul {
-        right: 0; /* Menü sağdan sola gelir */
+        right: 44px; /* Menü sağdan sola gelir */
+        top: 267px;
     }
 
     /* Menü İçindeki Bağlantıların Stili */
@@ -1138,3 +1190,354 @@ footer .newsLetterContainer input {
 }
 
 /* KURUMSAL BİTİŞ */
+
+
+
+/* SSS BAŞLANGIC */
+
+.faq-space{
+    padding-top: 70px;  /* Header yüksekliği kadar mesafe ekliyoruz */
+
+}
+.faq-item {
+    background-color: var(--gray);
+    margin-bottom: 20px;
+  padding: 20px 30px; /* Yanlardan boşluk ekledik */
+  border-radius: 15px; /* Köşeleri daha fazla yuvarladık */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; /* Ortalamak için */
+  width: calc(100% - 60px); /* Yanlardan 30px boşluk bırakacak şekilde */
+
+  
+}
+
+.faq-question {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--themeGreen);
+    margin-bottom: 10px;
+    text-align: center; 
+}
+
+.faq-answer {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify; 
+}
+
+.faq-answer p {
+    margin-top: 10px;
+}
+
+.faq-item:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* SSS BİTİŞ */
+
+/* TAKVİM BAŞLANGIC */
+
+/* Etkinlik Takvimi Stili */
+
+.sectionTitleTakvim {
+    
+    width: 325px;
+    border-bottom: 3px solid var(--themeGreen);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    position: relative;
+    margin-top: 25px;  /* Header yüksekliği kadar mesafe ekliyoruz */
+    padding: 10px 0;
+    text-transform: uppercase;
+    white-space: nowrap; /* Metnin tek satırda kalması için */
+}
+
+.sectionTitleTakvim::after {
+    display: inline-block;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: var(--themeGreen);
+    position: absolute;
+    left: 50%;
+    bottom: -10px; /* Alt çizgiye hizalamak için */
+    transform: translateX(-50%) rotate(45deg); /* Yatay ortalamak ve döndürmek için */
+    border: 3px solid #fff;
+}
+
+#etkinlik-takvimi {
+    padding: 50px 0;
+}
+
+.calendar {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background-color: #38b50e;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-header button:hover {
+    background-color: #2f9a0d;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.calendar-day {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #38b50e;
+    color: white;
+    border-radius: 5px;
+}
+
+.calendar-day-number {
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-day-number:hover {
+    background-color: #38b50e;
+    color: white;
+}
+
+.events {
+    margin-top: 30px;
+}
+
+.event {
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.event:hover {
+    background-color: #e6f9e6;
+}
+
+.event-date {
+    font-size: 1.2rem;
+    color: #38b50e;
+    margin-bottom: 5px;
+}
+
+.event-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.event-time {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+
+/* TAKVİM BİTİŞ */
+
+/* GÖNÜLLÜLÜK FORM BAŞLANGIC */
+
+.sectionTitleGonul {
+    width: 450px;
+    border-bottom: 3px solid var(--themeGreen);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    margin-top: 25px;  /* Header yüksekliği kadar mesafe ekliyoruz */
+    position: relative;
+    padding: 10px 0;
+    text-transform: uppercase;
+    white-space: nowrap; /* Metnin tek satırda kalması için */
+}
+
+.sectionTitleGonul::after {
+    display: inline-block;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: var(--themeGreen);
+    position: absolute;
+    left: 50%;
+    bottom: -10px; /* Alt çizgiye hizalamak için */
+    transform: translateX(-50%) rotate(45deg); /* Yatay ortalamak ve döndürmek için */
+    border: 3px solid #fff;
+}
+
+#gonulluluk-formu {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.volunteer-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #38b50e;
+    outline: none;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #38b50e;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2f9a0d;
+}
+
+.submit-btn:active {
+    background-color: #267d08;
+}
+
+
+/* GÖNÜLLÜLÜK FORM BİTİŞ */
+
+/* YORUMLAR BAŞLANGIC */
+.sectionTitleYorum {
+    width: 250px;
+    border-bottom: 3px solid var(--themeGreen);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    margin-top: 25px;  /* Header yüksekliği kadar mesafe ekliyoruz */
+    position: relative;
+    padding: 10px 0;
+    text-transform: uppercase;
+    white-space: nowrap; /* Metnin tek satırda kalması için */
+}
+
+.sectionTitleYorum::after {
+    display: inline-block;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: var(--themeGreen);
+    position: absolute;
+    left: 50%;
+    bottom: -10px; /* Alt çizgiye hizalamak için */
+    transform: translateX(-50%) rotate(45deg); /* Yatay ortalamak ve döndürmek için */
+    border: 3px solid #fff;
+}
+
+#yorumlar {
+    padding: 50px 0;
+    background-color: #efefef;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-style: italic;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    color: #38b50e;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* YORUMLAR BİTİŞ */
